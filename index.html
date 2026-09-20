@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<meta name="theme-color" content="#030a04"/>
+<link rel="icon" type="image/png" href="logo.png"/>
+<link rel="apple-touch-icon" href="logo.png"/>
+<link rel="shortcut icon" href="logo.png"/>
+<title>EXODUS 6.0 — SCAD College | National Level Technical Symposium</title>
+<meta name="description" content="EXODUS 6.0 — National Level Technical Symposium by the Department of Computer Science and Engineering, SCAD College, Tirunelveli. October 6, 2026."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- Cursor -->
+<div id="cr" aria-hidden="true"></div>
+<div id="crd" aria-hidden="true"></div>
+
+<!-- Canvas bg -->
+<canvas id="cnv" aria-hidden="true"></canvas>
+
+<!-- Scroll progress -->
+<div id="spb" aria-hidden="true"></div>
+
+<!-- Page transition overlay -->
+<div id="pto" aria-hidden="true">
+  <div></div><div></div><div></div><div></div>
+</div>
+
+<!-- ═══════════════════════════════════
+     NAVBAR — full width, no gaps
+═══════════════════════════════════ -->
+<header id="nav" role="banner">
+  <div class="ni">
+    <!-- Logo + Brand -->
+    <button class="brand" data-go="home" aria-label="Go to Home">
+      <img src="logo.png" alt="SCAD College Logo" class="brand-logo" width="44" height="44"/>
+      <div class="brand-text">
+        <span class="brand-name">EXODUS</span>
+        <span class="brand-ver">6.0</span>
+        <span class="brand-sub">SCAD College · Dept. of CSE</span>
+      </div>
+    </button>
+
+    <!-- Desktop nav -->
+    <nav class="dnav" role="navigation" aria-label="Main navigation">
+      <button class="nl active" data-go="home">Home</button>
+      <button class="nl" data-go="tech">Tech Events</button>
+      <button class="nl" data-go="nontech">Non-Tech</button>
+      <button class="nl" data-go="schedule">Schedule</button>
+      <button class="nl" data-go="contact">Contact</button>
+    </nav>
+
+    <button class="nreg" data-go="register" aria-label="Register for EXODUS 6.0">Register →</button>
+
+    <!-- Hamburger -->
+    <button class="hbg" id="hbg" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="mnav" id="mnav" role="navigation" aria-label="Mobile navigation" aria-hidden="true">
+    <button class="ml" data-go="home">Home</button>
+    <button class="ml" data-go="tech">Tech Events</button>
+    <button class="ml" data-go="nontech">Non-Tech Events</button>
+    <button class="ml" data-go="schedule">Schedule</button>
+    <button class="ml" data-go="contact">Contact</button>
+    <button class="ml mreg" data-go="register">Register Now →</button>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════
+     MAIN
+═══════════════════════════════════ -->
+<main id="app">
+
+<!-- ═══════════════════════════════════
+     HOME PAGE
+═══════════════════════════════════ -->
+<div class="pg active" id="pg-home">
+
+  <!-- HERO — full viewport, split layout -->
+  <section class="hero" aria-label="EXODUS 6.0 Hero">
+
+    <!-- Decorative grid -->
+    <div class="h-grid" aria-hidden="true"></div>
+    <!-- Diagonal accent line -->
+    <div class="h-diag" aria-hidden="true"></div>
+
+    <!-- Left content column -->
+    <div class="hc">
+      <div class="hc-inner">
+
+        <div class="h-pill" data-an>
+          <span class="pill-dot" aria-hidden="true"></span>
+          <span>National Level Technical Symposium</span>
+        </div>
+
+        <div class="h-college" data-an style="--d:.08s">
+          SCAD College of Engineering and Technology
+        </div>
+
+        <h1 class="h-title" aria-label="EXODUS 6.0">
+          <div class="ht-line">
+            <span class="hc0" style="--d:.12s">E</span><span class="hc0" style="--d:.17s">X</span><span class="hc0 hca" style="--d:.22s" aria-hidden="true">◈</span><span class="hc0" style="--d:.27s">D</span><span class="hc0" style="--d:.32s">U</span><span class="hc0" style="--d:.37s">S</span>
+          </div>
+          <div class="ht-ver" data-an style="--d:.44s">6.0</div>
+        </h1>
+
+        <p class="h-dept" data-an style="--d:.5s">
+          Department of Computer Science and Engineering
+        </p>
+
+        <!-- Info row -->
+        <div class="h-info" data-an style="--d:.55s" role="list">
+          <div class="hi" role="listitem"><span class="hi-l">📅</span><span class="hi-v">Oct 06, 2026</span></div>
+          <div class="hi-sep" aria-hidden="true"></div>
+          <div class="hi" role="listitem"><span class="hi-l">⏰</span><span class="hi-v">9:30 AM</span></div>
+          <div class="hi-sep" aria-hidden="true"></div>
+          <div class="hi" role="listitem"><span class="hi-l">📍</span><span class="hi-v">Tirunelveli</span></div>
+          <div class="hi-sep" aria-hidden="true"></div>
+          <div class="hi" role="listitem"><span class="hi-l">💰</span><span class="hi-v fee">₹250</span></div>
+        </div>
+
+        <!-- Countdown -->
+        <div class="h-cd" data-an style="--d:.62s" aria-label="Countdown to event">
+          <p class="cd-label">Event starts in</p>
+          <div class="cd-nums" role="timer">
+            <div class="cdu"><b id="hD">00</b><small>Days</small></div>
+            <span class="cds" aria-hidden="true">:</span>
+            <div class="cdu"><b id="hH">00</b><small>Hrs</small></div>
+            <span class="cds" aria-hidden="true">:</span>
+            <div class="cdu"><b id="hM">00</b><small>Min</small></div>
+            <span class="cds" aria-hidden="true">:</span>
+            <div class="cdu"><b id="hS">00</b><small>Sec</small></div>
+          </div>
+        </div>
+
+        <!-- CTAs -->
+        <div class="h-ctas" data-an style="--d:.7s">
+          <button class="btn-p" data-go="register">
+            <span class="bp-fill" aria-hidden="true"></span>
+            <span>Register Now</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <button class="btn-o" data-go="tech">Explore Events</button>
+        </div>
+
+        <div class="h-scroll" data-an style="--d:.85s" aria-hidden="true">
+          <div class="hs-line"></div>
+          <span>Scroll</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right — Event mosaic grid: instant preview of what's happening -->
+    <div class="hv" aria-label="Event preview">
+      <div class="ev-mosaic">
+        <div class="evm-card" style="--d:0s">
+          <img src="ev_paper.jpg" alt="Paper Presentation" class="evm-img" loading="lazy"/>
+          <div class="evm-ov"></div>
+          <span class="evm-label">Paper Presentation</span>
+        </div>
+        <div class="evm-card" style="--d:.07s">
+          <img src="ev_quiz.jpg" alt="Technical Quiz" class="evm-img" loading="lazy"/>
+          <div class="evm-ov"></div>
+          <span class="evm-label">Technical Quiz</span>
+        </div>
+        <div class="evm-card" style="--d:.14s">
+          <img src="ev_esports.jpg" alt="E-Sports" class="evm-img" loading="lazy"/>
+          <div class="evm-ov"></div>
+          <span class="evm-label">E-Sports</span>
+        </div>
+        <div class="evm-card" style="--d:.21s">
+          <img src="ev_treasure.jpg" alt="Treasure Hunt" class="evm-img" loading="lazy"/>
+          <div class="evm-ov"></div>
+          <span class="evm-label">Treasure Hunt</span>
+        </div>
+      </div>
+      <!-- Subtle count badge -->
+      <div class="evm-foot">
+        <span class="evm-count"><em>9</em> Events</span>
+        <span class="evm-dot">·</span>
+        <span class="evm-count"><em>₹250</em> / head</span>
+        <span class="evm-dot">·</span>
+        <span class="evm-count"><em>Oct 06</em></span>
+      </div>
+    </div>
+
+    <!-- Background watermark -->
+    <div class="h-wm" aria-hidden="true">EXODUS</div>
+  </section>
+
+  <!-- Back to top -->
+  <button id="btt" aria-label="Back to top" title="Back to top">↑</button>
+
+  <!-- TICKER -->
+  <div class="ticker" role="marquee" aria-label="Event names ticker">
+    <div class="t-track">
+      <span>Paper Presentation</span><span class="td" aria-hidden="true">◈</span>
+      <span>Technical Quiz</span><span class="td" aria-hidden="true">◈</span>
+      <span>Prompt Battle</span><span class="td" aria-hidden="true">◈</span>
+      <span>Code Completion</span><span class="td" aria-hidden="true">◈</span>
+      <span>Treasure Hunt</span><span class="td" aria-hidden="true">◈</span>
+      <span>E-Sports</span><span class="td" aria-hidden="true">◈</span>
+      <span>Memory Challenge</span><span class="td" aria-hidden="true">◈</span>
+      <span>Box Cricket</span><span class="td" aria-hidden="true">◈</span>
+      <span>Find If You Can</span><span class="td" aria-hidden="true">◈</span>
+      <!-- duplicate for seamless loop -->
+      <span>Paper Presentation</span><span class="td" aria-hidden="true">◈</span>
+      <span>Technical Quiz</span><span class="td" aria-hidden="true">◈</span>
+      <span>Prompt Battle</span><span class="td" aria-hidden="true">◈</span>
+      <span>Code Completion</span><span class="td" aria-hidden="true">◈</span>
+      <span>Treasure Hunt</span><span class="td" aria-hidden="true">◈</span>
+      <span>E-Sports</span><span class="td" aria-hidden="true">◈</span>
+      <span>Memory Challenge</span><span class="td" aria-hidden="true">◈</span>
+      <span>Box Cricket</span><span class="td" aria-hidden="true">◈</span>
+      <span>Find If You Can</span><span class="td" aria-hidden="true">◈</span>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <section class="stats" aria-label="Event statistics">
+    <div class="st-row">
+      <div class="st" data-an><span class="sn"><span class="cnt" data-to="500">0</span>+</span><span class="sl">Expected Participants</span></div>
+      <div class="std" aria-hidden="true"></div>
+      <div class="st" data-an style="--d:.1s"><span class="sn"><span class="cnt" data-to="9">0</span></span><span class="sl">Exciting Events</span></div>
+      <div class="std" aria-hidden="true"></div>
+      <div class="st" data-an style="--d:.2s"><span class="sn"><span class="cnt" data-to="25">0</span>+</span><span class="sl">Colleges Invited</span></div>
+      <div class="std" aria-hidden="true"></div>
+      <div class="st" data-an style="--d:.3s"><span class="sn">₹<span class="cnt" data-to="25">0</span>K+</span><span class="sl">Prize Pool</span></div>
+    </div>
+  </section>
+
+  <!-- VENUE -->
+  <section class="sec venue-sec" aria-label="Our venue">
+    <div class="venue-inner">
+      <img src="campus.jpg" alt="SCAD College Campus" class="venue-bg"/>
+      <div class="venue-ov"></div>
+      <div class="venue-content" data-an>
+        <p class="eye">Our Venue</p>
+        <h2>SCAD College of Engineering &amp; Technology</h2>
+        <p class="venue-sub">A 25-year legacy of excellence. Nestled in Cherammahadevi, Tirunelveli, our Silver Jubilee campus is the proud host of EXODUS 6.0 — where tomorrow's engineers compete today.</p>
+        <div class="venue-chips">
+          <span>📍 Cherammahadevi, Tirunelveli – 627414</span>
+          <span>🎓 25 Years of Excellence</span>
+          <span>🏛️ Premier Engineering Institution</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAINS -->
+  <section class="sec gains-sec" aria-label="What you gain">
+    <div class="sw">
+      <div class="seh" data-an>
+        <p class="eye">Why Attend</p>
+        <h2>What You Gain at <em>EXODUS 6.0</em></h2>
+      </div>
+      <div class="gains">
+        <div class="gain" data-an>
+          <div class="gn">01</div>
+          <div class="gb">
+            <h3>Certificates</h3>
+            <p>Industry-recognised participation and achievement certificates issued to every registered participant.</p>
+          </div>
+        </div>
+        <div class="gain" data-an style="--d:.1s">
+          <div class="gn">02</div>
+          <div class="gb">
+            <h3>Network</h3>
+            <p>Meet 500+ bright minds from colleges across Tamil Nadu and build professional connections that last.</p>
+          </div>
+        </div>
+        <div class="gain" data-an style="--d:.2s">
+          <div class="gn">03</div>
+          <div class="gb">
+            <h3>Prizes</h3>
+            <p>Win cash prizes and trophies. Top performers are honoured on stage by industry experts and faculty.</p>
+          </div>
+        </div>
+        <div class="gain" data-an style="--d:.3s">
+          <div class="gn">04</div>
+          <div class="gb">
+            <h3>Experience</h3>
+            <p>Real competitive scenarios — coding, quizzes, strategy, and creativity. Skills that go beyond the classroom.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Registration strip -->
+      <div class="rstrip" data-an>
+        <div class="rs-left">
+          <p class="rs-h">Online Registration closes <strong>Oct 05, 2026 at 10 PM</strong></p>
+          <p class="rs-s">On-spot registration available · Fee: ₹250 per head · Certificates for all</p>
+        </div>
+        <button class="btn-p" data-go="register">
+          <span class="bp-fill" aria-hidden="true"></span>
+          <span>Register Now</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS PREVIEW -->
+  <section class="sec prev-sec" aria-label="Events preview">
+    <div class="sw">
+      <div class="seh" data-an>
+        <p class="eye">At a Glance</p>
+        <h2>Two Categories. <em>Nine Events.</em></h2>
+      </div>
+      <div class="prevcols">
+        <div class="pc" data-an>
+          <div class="pch">
+            <span class="pc-badge tech-badge">⚙ Technical</span>
+            <button class="pclink" data-go="tech">View all →</button>
+          </div>
+          <ol class="pcl">
+            <li><span>Paper Presentation</span></li>
+            <li><span>Technical Quiz</span></li>
+            <li><span>Prompt Battle</span></li>
+            <li><span>Code Completion</span></li>
+          </ol>
+        </div>
+        <div class="pcdiv" aria-hidden="true"></div>
+        <div class="pc" data-an style="--d:.12s">
+          <div class="pch">
+            <span class="pc-badge nt-badge">★ Non-Technical</span>
+            <button class="pclink gold-lnk" data-go="nontech">View all →</button>
+          </div>
+          <ol class="pcl gold-pcl">
+            <li><span>Treasure Hunt</span></li>
+            <li><span>E-Sports</span></li>
+            <li><span>Find If You Can</span></li>
+            <li><span>Memory Challenge</span></li>
+            <li><span>Box Cricket</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /home -->
+
+<!-- ═══════════════════════════════════
+     TECH EVENTS PAGE
+═══════════════════════════════════ -->
+<div class="pg" id="pg-tech">
+  <div class="ph">
+    <div class="ph-bg" aria-hidden="true">TECHNICAL</div>
+    <div class="ph-content">
+      <p class="eye">EXODUS 6.0</p>
+      <h1>Technical <em>Events</em></h1>
+      <p class="ph-sub">Four challenges. Compete. Prove your technical excellence.</p>
+    </div>
+  </div>
+
+  <div class="sw">
+    <div class="evl-cards">
+  <div class="evc" data-an>
+    <div class="evc-img"><img src="ev_paper.jpg" alt="Paper Presentation" loading="lazy"/><div class="evc-img-ov"></div></div>
+    <div class="evc-body">
+      <span class="evc-num">01</span>
+      <h3 class="evc-name">Paper Presentation</h3>
+      <span class="evc-fmt">1–3 Members &nbsp;·&nbsp; 10 min + Q&amp;A</span>
+      <p class="evc-desc">Present your research or innovative idea before a panel of eminent judges. Judged on clarity, originality, and depth. A platform to turn your ideas into recognition and sharpen your ability to communicate technically under pressure.</p>
+      <div class="evc-tags"><span>Abstract required</span><span>Any domain</span><span>Certificates for all</span></div>
+    </div>
+  </div>
+  <div class="evc evc-rev" data-an>
+    <div class="evc-img"><img src="ev_quiz.jpg" alt="Technical Quiz" loading="lazy"/><div class="evc-img-ov"></div></div>
+    <div class="evc-body">
+      <span class="evc-num">02</span>
+      <h3 class="evc-name">Technical Quiz</h3>
+      <span class="evc-fmt">Team of 2 &nbsp;·&nbsp; 1.5 Hours</span>
+      <p class="evc-desc">A high-octane knowledge battle covering programming fundamentals, emerging technologies, AI, cybersecurity, and digital innovations. Multiple rounds — prelims, rapid-fire, and buzzer — each more intense than the last.</p>
+      <div class="evc-tags"><span>Buzzer rounds</span><span>Rapid-fire</span><span>Prelims + Finals</span></div>
+    </div>
+  </div>
+  <div class="evc" data-an>
+    <div class="evc-img"><img src="ev_prompt.jpg" alt="Prompt Battle" loading="lazy"/><div class="evc-img-ov"></div></div>
+    <div class="evc-body">
+      <span class="evc-num">03</span>
+      <h3 class="evc-name">Prompt Battle</h3>
+      <span class="evc-fmt">Individual / Pair &nbsp;·&nbsp; 45 Min</span>
+      <p class="evc-desc">The AI era is here — and those who command it, lead it. Craft the most effective, creative, and precise prompts to generate superior AI outputs. Judged on prompt quality, result produced, and creativity of approach.</p>
+      <div class="evc-tags"><span>AI tools provided</span><span>Creativity judged</span><span>New-age format</span></div>
+    </div>
+  </div>
+  <div class="evc evc-rev" data-an>
+    <div class="evc-img"><img src="ev_code.jpg" alt="Code Completion" loading="lazy"/><div class="evc-img-ov"></div></div>
+    <div class="evc-body">
+      <span class="evc-num">04</span>
+      <h3 class="evc-name">Code Completion</h3>
+      <span class="evc-fmt">Individual &nbsp;·&nbsp; 1 Hour</span>
+      <p class="evc-desc">Given a partial piece of code — complete it correctly and efficiently to produce the expected output. Tests your logic, syntax, debugging instinct and problem-solving under real time pressure. Every line counts.</p>
+      <div class="evc-tags"><span>Any language</span><span>Logic + syntax</span><span>Time-pressured</span></div>
+    </div>
+  </div>
+</div>
+
+    <div class="glbox" data-an>
+      <h4 class="glh">Event Guidelines</h4>
+      <div class="glg">
+        <p>Registration closes <strong>Oct 05, 2026 at 10 PM</strong>. On-spot registration available.</p>
+        <p>Fee: <strong>₹250 per head</strong>. Payment at the registration desk on event day.</p>
+        <p>Carry a valid college ID card for entry and event verification.</p>
+        <p>Participation certificates issued to all registered participants.</p>
+        <p>Follow event schedules strictly. Late entries may be disqualified.</p>
+        <p>Maintain decorum and professionalism throughout the event.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mapsec">
+    <div class="sw">
+      <div class="seh" data-an>
+        <p class="eye">Find Us</p>
+        <h2>SCAD College, <em>Tirunelveli</em></h2>
+      </div>
+      <div class="mapbox" data-an>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.097319307048!2d77.57011267477614!3d8.667204691380435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04157a787199f9%3A0x78056aa3e3dafb63!2sSCAD%20College%20of%20Engineering%20and%20Technology!5e1!3m2!1sen!2sin!4v1742484769995!5m2!1sen!2sin" allowfullscreen loading="lazy" title="SCAD College location on Google Maps"></iframe>
+      </div>
+    </div>
+  </div>
+</div><!-- /tech -->
+
+<!-- ═══════════════════════════════════
+     NON-TECH EVENTS PAGE
+═══════════════════════════════════ -->
+<div class="pg" id="pg-nontech">
+  <div class="ph">
+    <div class="ph-bg" aria-hidden="true">NON-TECH</div>
+    <div class="ph-content">
+      <p class="eye">EXODUS 6.0</p>
+      <h1>Non-Technical <em>Events</em></h1>
+      <p class="ph-sub">Compete beyond the screen. Dare, play, and win.</p>
+    </div>
+  </div>
+
+  <div class="sw">
+    <div class="ntc-grid">
+  <div class="ntc-row1">
+    <div class="ntc" data-an>
+      <img src="ev_treasure.jpg" alt="Treasure Hunt" class="ntc-img" loading="lazy"/>
+      <div class="ntc-ov"></div>
+      <div class="ntc-body">
+        <span class="ntc-num">01</span>
+        <h3 class="ntc-name">Treasure Hunt</h3>
+        <span class="ntc-fmt">Team of 3 · 2 Hours</span>
+        <p class="ntc-desc">Race against rival teams to decode cryptic clues spread across the entire campus. Navigate, think fast, and reach the treasure before anyone else.</p>
+        <div class="ntc-tags"><span>Campus-wide</span><span>Team strategy</span><span>Cryptic clues</span></div>
+      </div>
+    </div>
+    <div class="ntc" data-an style="--d:.08s">
+      <img src="ev_esports.jpg" alt="E-Sports" class="ntc-img" loading="lazy"/>
+      <div class="ntc-ov"></div>
+      <div class="ntc-body">
+        <span class="ntc-num">02</span>
+        <h3 class="ntc-name">E-Sports</h3>
+        <span class="ntc-fmt">Squad of 4 · Knockout</span>
+        <p class="ntc-desc">Battle royale on mobile — Free Fire and PUBG tournaments where only the last squad standing wins. High-intensity competitive gaming.</p>
+        <div class="ntc-tags"><span>Free Fire + PUBG</span><span>Mobile gaming</span><span>Knockout rounds</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="ntc-row2">
+    <div class="ntc" data-an style="--d:.12s">
+      <img src="ev_findyou.jpg" alt="Find If You Can" class="ntc-img" loading="lazy"/>
+      <div class="ntc-ov"></div>
+      <div class="ntc-body">
+        <span class="ntc-num">03</span>
+        <h3 class="ntc-name">Find If You Can</h3>
+        <span class="ntc-fmt">Individual / Pair · 30 Min</span>
+        <p class="ntc-desc">Hidden across the campus — objects, clues, items. Find them all before time runs out.</p>
+        <div class="ntc-tags"><span>Speed-based</span><span>Campus-wide</span></div>
+      </div>
+    </div>
+    <div class="ntc" data-an style="--d:.18s">
+      <img src="ev_memory.jpg" alt="Memory Challenge" class="ntc-img" loading="lazy"/>
+      <div class="ntc-ov"></div>
+      <div class="ntc-body">
+        <span class="ntc-num">04</span>
+        <h3 class="ntc-name">Memory Challenge</h3>
+        <span class="ntc-fmt">Individual · Multiple Rounds</span>
+        <p class="ntc-desc">Sequences, patterns, words, images — memorise them all under increasing pressure. Progressive rounds push your cognitive endurance.</p>
+        <div class="ntc-tags"><span>Progressive rounds</span><span>Pattern recall</span></div>
+      </div>
+    </div>
+    <div class="ntc" data-an style="--d:.24s">
+      <img src="ev_cricket.jpg" alt="Box Cricket" class="ntc-img" loading="lazy"/>
+      <div class="ntc-ov"></div>
+      <div class="ntc-body">
+        <span class="ntc-num">05</span>
+        <h3 class="ntc-name">Box Cricket</h3>
+        <span class="ntc-fmt">Team of 6 · 6 Overs</span>
+        <p class="ntc-desc">Cricket reimagined in a compact, electric arena. Six overs per side, twelve players, one winner.</p>
+        <div class="ntc-tags"><span>Soft ball</span><span>Knockout format</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="glbox gold-gl" data-an>
+      <h4 class="glh">Event Guidelines</h4>
+      <div class="glg">
+        <p>Registration Fee: <strong>₹250 per head</strong>. On-spot registration available on event day.</p>
+        <p>Carry a valid college ID card for entry and event verification.</p>
+        <p>Maintain sportsmanship and respect towards all participants and organisers.</p>
+        <p>Follow all event schedules and venue instructions without exception.</p>
+        <p>Participation certificates issued to all registered participants.</p>
+      </div>
+    </div>
+  </div>
+</div><!-- /nontech -->
+
+<!-- ═══════════════════════════════════
+     SCHEDULE PAGE
+═══════════════════════════════════ -->
+<div class="pg" id="pg-schedule">
+  <div class="ph">
+    <div class="ph-bg" aria-hidden="true">SCHEDULE</div>
+    <div class="ph-content">
+      <p class="eye">October 06, 2026</p>
+      <h1>Day <em>Schedule</em></h1>
+      <p class="ph-sub">One full day of competition, networking, and celebration.</p>
+    </div>
+  </div>
+
+  <div class="sw">
+    <div class="tl">
+      <div class="tlr" data-an>
+        <div class="tlt">08:30<small>AM</small></div>
+        <div class="tlm"><div class="tld"></div><div class="tls"></div></div>
+        <div class="tlb"><h4>Registration &amp; Check-In</h4><p>Participant check-in, ID verification, kit distribution and welcome refreshments at the main gate.</p><span class="tlv">📍 Main Gate / Reception</span></div>
+      </div>
+      <div class="tlr" data-an>
+        <div class="tlt">09:30<small>AM</small></div>
+        <div class="tlm"><div class="tld"></div><div class="tls"></div></div>
+        <div class="tlb"><h4>Inauguration Ceremony</h4><p>Chief guest address, lighting of the lamp and the official opening of EXODUS 6.0.</p><span class="tlv">📍 Main Auditorium</span></div>
+      </div>
+      <div class="tlr" data-an>
+        <div class="tlt">10:30<small>AM</small></div>
+        <div class="tlm"><div class="tld"></div><div class="tls"></div></div>
+        <div class="tlb"><h4>Technical Events — Round 1</h4><p>Technical Quiz, Code Completion and Prompt Battle preliminary rounds begin simultaneously in lab blocks.</p><span class="tlv">📍 Lab Blocks A &amp; B</span></div>
+      </div>
+      <div class="tlr" data-an>
+        <div class="tlt">11:00<small>AM</small></div>
+        <div class="tlm"><div class="tld"></div><div class="tls"></div></div>
+        <div class="tlb"><h4>Paper Presentation</h4><p>Research paper presentations before a panel of faculty and industry judges in the seminar hall.</p><span class="tlv">📍 Seminar Hall</span></div>
+      </div>
+      <div class="tlr" data-an>
+        <div class="tlt">11:30<small>AM</small></div>
+        <div class="tlm"><div class="tld"></div><div class="tls"></div></div>
+        <div class="tlb"><h4>Non-Tech Events Begin</h4><p>Treasure Hunt, Find If You Can, Memory Challenge and E-Sports first rounds begin across multiple venues.</p><span class="tlv">📍 Multiple Venues</span></div>
+      </div>
+      <div class="tlr" data-an>
+        <div class="tlt">01:00<small>PM</small></div>
+        <div class="tlm"><div class="tld"></div><div class="tls"></div></div>
+        <div class="tlb"><h4>Lunch Break</h4><p>Lunch provided for all registered participants. Food court, stalls and refreshment counters open.</p><span class="tlv">📍 Food Court</span></div>
+      </div>
+      <div class="tlr" data-an>
+        <div class="tlt">02:00<small>PM</small></div>
+        <div class="tlm"><div class="tld"></div><div class="tls"></div></div>
+        <div class="tlb"><h4>Technical Events — Finals</h4><p>Finals for Code Completion, Technical Quiz and Prompt Battle. Top performers from Round 1 compete for the podium.</p><span class="tlv">📍 Lab Block C</span></div>
+      </div>
+      <div class="tlr" data-an>
+        <div class="tlt">03:00<small>PM</small></div>
+        <div class="tlm"><div class="tld"></div><div class="tls"></div></div>
+        <div class="tlb"><h4>Box Cricket</h4><p>Semi-finals and finals of the Box Cricket tournament. Come cheer for your team.</p><span class="tlv">📍 Sports Ground</span></div>
+      </div>
+      <div class="tlr tllast" data-an>
+        <div class="tlt golt">05:00<small>PM</small></div>
+        <div class="tlm"><div class="tld gold-d"></div></div>
+        <div class="tlb gold-b"><h4>Valedictory &amp; Prize Distribution</h4><p>Grand finale — prize distribution, certificates, closing address and group photograph. The curtain falls on EXODUS 6.0.</p><span class="tlv">📍 Main Auditorium</span></div>
+      </div>
+    </div>
+  </div>
+</div><!-- /schedule -->
+
+<!-- ═══════════════════════════════════
+     CONTACT PAGE
+═══════════════════════════════════ -->
+<div class="pg" id="pg-contact">
+  <div class="ph">
+    <div class="ph-bg" aria-hidden="true">CONTACT</div>
+    <div class="ph-content">
+      <p class="eye">Get in Touch</p>
+      <h1>Contact <em>Us</em></h1>
+      <p class="ph-sub">Any questions? Reach out — we respond quickly.</p>
+    </div>
+  </div>
+
+  <div class="sw">
+    <div class="ctgrid">
+      <div class="ctinfo">
+        <div class="cti" data-an>
+          <div class="cti-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><h5>Venue</h5><p>SCAD College of Engineering &amp; Technology<br/>Dept. of Computer Science and Engineering<br/>Cherammahadevi, Tirunelveli – 627 414</p></div>
+        </div>
+        <div class="cti" data-an style="--d:.08s">
+          <div class="cti-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.85-.85a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.5 16z"/></svg></div>
+          <div><h5>Coordinators</h5><p>Student Coordinator: +91 XXXXX XXXXX<br/>Staff Coordinator: +91 XXXXX XXXXX<br/>Convenor: +91 XXXXX XXXXX</p></div>
+        </div>
+        <div class="cti" data-an style="--d:.16s">
+          <div class="cti-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><h5>Email</h5><p>exodus@scad.ac.in</p></div>
+        </div>
+        <div class="cti" data-an style="--d:.24s">
+          <div class="cti-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+          <div><h5>Date &amp; Time</h5><p>October 06, 2026<br/>9:30 AM – 6:00 PM IST</p></div>
+        </div>
+      </div>
+
+      <form class="ctform" data-an onsubmit="contactSubmit(event)" novalidate>
+        <h3>Send a Message</h3>
+        <div class="fr">
+          <div class="fg"><label for="cf-name">Name</label><input id="cf-name" type="text" placeholder="Your full name" required autocomplete="name"/></div>
+          <div class="fg"><label for="cf-email">Email</label><input id="cf-email" type="email" placeholder="you@email.com" required autocomplete="email"/></div>
+        </div>
+        <div class="fg"><label for="cf-sub">Subject</label><input id="cf-sub" type="text" placeholder="What's this about?"/></div>
+        <div class="fg"><label for="cf-msg">Message</label><textarea id="cf-msg" rows="5" placeholder="Type your message here..."></textarea></div>
+        <button type="submit" class="btn-p" style="width:100%;justify-content:center">
+          <span class="bp-fill" aria-hidden="true"></span>
+          <span>Send Message</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </form>
+    </div>
+
+    <div class="mapbox" data-an style="margin-top:3rem">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.097319307048!2d77.57011267477614!3d8.667204691380435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04157a787199f9%3A0x78056aa3e3dafb63!2sSCAD%20College%20of%20Engineering%20and%20Technology!5e1!3m2!1sen!2sin!4v1742484769995!5m2!1sen!2sin" allowfullscreen loading="lazy" title="SCAD College on Google Maps"></iframe>
+    </div>
+  </div>
+</div><!-- /contact -->
+
+<!-- ═══════════════════════════════════
+     REGISTER PAGE
+═══════════════════════════════════ -->
+<div class="pg" id="pg-register">
+  <div class="ph">
+    <div class="ph-bg" aria-hidden="true">REGISTER</div>
+    <div class="ph-content">
+      <p class="eye">EXODUS 6.0 · Oct 06, 2026</p>
+      <h1>Register <em>Now</em></h1>
+      <p class="ph-sub">Secure your spot at SCAD's biggest technical symposium.</p>
+    </div>
+  </div>
+
+  <div class="sw">
+    <div class="reglayout">
+      <div class="regleft">
+        <div class="rdet" data-an>
+          <h4>Registration Info</h4>
+          <div class="rdrs">
+            <div class="rdr"><span>Event Date</span><strong>October 06, 2026</strong></div>
+            <div class="rdr"><span>Time</span><strong>9:30 AM onwards</strong></div>
+            <div class="rdr"><span>Closes</span><strong>Oct 05 · 10 PM</strong></div>
+            <div class="rdr"><span>Fee</span><strong class="fee">₹250 per head</strong></div>
+            <div class="rdr"><span>On-Spot</span><strong>Available</strong></div>
+            <div class="rdr"><span>Venue</span><strong>SCAD College, Tirunelveli</strong></div>
+          </div>
+        </div>
+        <div class="rdet" data-an style="--d:.1s">
+          <h4>What's Included</h4>
+          <ul class="rinc">
+            <li>Participation Certificate</li>
+            <li>Lunch &amp; Refreshments</li>
+            <li>Event Kit</li>
+            <li>Entry to all chosen events</li>
+            <li>Eligibility for prizes</li>
+          </ul>
+        </div>
+      </div>
+
+      <form class="regform" data-an onsubmit="registerSubmit(event)" novalidate>
+        <h3>Participant Details</h3>
+        <div class="fr">
+          <div class="fg"><label for="rf-name">Full Name *</label><input id="rf-name" type="text" placeholder="Your full name" required autocomplete="name"/></div>
+          <div class="fg"><label for="rf-reg">Register No. *</label><input id="rf-reg" type="text" placeholder="College register number" required/></div>
+        </div>
+        <div class="fr">
+          <div class="fg"><label for="rf-email">Email *</label><input id="rf-email" type="email" placeholder="you@email.com" required autocomplete="email"/></div>
+          <div class="fg"><label for="rf-ph">Phone *</label><input id="rf-ph" type="tel" placeholder="+91 XXXXX XXXXX" required autocomplete="tel"/></div>
+        </div>
+        <div class="fr">
+          <div class="fg"><label for="rf-clg">College *</label><input id="rf-clg" type="text" placeholder="Your college name" required/></div>
+          <div class="fg"><label for="rf-dept">Department *</label><input id="rf-dept" type="text" placeholder="Your department" required/></div>
+        </div>
+        <div class="fg">
+          <label for="rf-yr">Year of Study *</label>
+          <select id="rf-yr" required>
+            <option value="">Select year</option>
+            <option>1st Year</option><option>2nd Year</option><option>3rd Year</option><option>4th Year</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label>Events Interested In</label>
+          <div class="evchk">
+            <label class="ck"><input type="checkbox"/>Paper Presentation</label>
+            <label class="ck"><input type="checkbox"/>Technical Quiz</label>
+            <label class="ck"><input type="checkbox"/>Prompt Battle</label>
+            <label class="ck"><input type="checkbox"/>Code Completion</label>
+            <label class="ck"><input type="checkbox"/>Treasure Hunt</label>
+            <label class="ck"><input type="checkbox"/>E-Sports</label>
+            <label class="ck"><input type="checkbox"/>Find If You Can</label>
+            <label class="ck"><input type="checkbox"/>Memory Challenge</label>
+            <label class="ck"><input type="checkbox"/>Box Cricket</label>
+          </div>
+        </div>
+        <button type="submit" class="btn-p" style="width:100%;justify-content:center;padding:1.1rem 2rem;font-size:.78rem">
+          <span class="bp-fill" aria-hidden="true"></span>
+          <span>Submit Registration — ₹250</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</div><!-- /register -->
+
+</main>
+
+<!-- ═══════════════════════════════════
+     FOOTER
+═══════════════════════════════════ -->
+<footer id="ft" role="contentinfo">
+  <div class="ft-glow" aria-hidden="true"></div>
+  <div class="ft-inner">
+    <div class="ft-brand">
+      <div class="ft-logo">
+        <img src="logo.png" alt="SCAD College Logo" width="52" height="52"/>
+        <div>
+          <span class="ft-name">EXODUS <em>6.0</em></span>
+          <span class="ft-sub-name">SCAD College of Engineering &amp; Technology</span>
+        </div>
+      </div>
+      <p>National Level Technical Symposium by the Department of Computer Science and Engineering, Cherammahadevi, Tirunelveli – 627 414, Tamil Nadu.</p>
+      <span class="ft-jub">✦ Silver Jubilee — 25 Years of Excellence · Our Students, Our Pride</span>
+    </div>
+
+    <div class="ft-nav-col">
+      <h5>Navigate</h5>
+      <button data-go="home">Home</button>
+      <button data-go="tech">Tech Events</button>
+      <button data-go="nontech">Non-Tech Events</button>
+      <button data-go="schedule">Schedule</button>
+      <button data-go="contact">Contact</button>
+      <button data-go="register">Register</button>
+    </div>
+
+    <div class="ft-nav-col">
+      <h5>Events</h5>
+      <button data-go="tech">Paper Presentation</button>
+      <button data-go="tech">Technical Quiz</button>
+      <button data-go="tech">Prompt Battle</button>
+      <button data-go="tech">Code Completion</button>
+      <button data-go="nontech">Treasure Hunt</button>
+      <button data-go="nontech">E-Sports &amp; More</button>
+    </div>
+
+    <div class="ft-cd-col">
+      <h5>Countdown</h5>
+      <div class="ft-cd">
+        <div class="fc"><span id="fD">00</span><small>d</small></div>
+        <span>:</span>
+        <div class="fc"><span id="fH">00</span><small>h</small></div>
+        <span>:</span>
+        <div class="fc"><span id="fM">00</span><small>m</small></div>
+      </div>
+      <p>📍 Cherammahadevi, Tirunelveli</p>
+      <p>✉️ exodus@scad.ac.in</p>
+      <p>📅 October 06, 2026 · 9:30 AM</p>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <p>© 2026 EXODUS 6.0 · SCAD College of Engineering and Technology · Dept. of CSE</p>
+    <p>Silver Jubilee — 25 Years of Excellence</p>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="mb">
+    <div class="mb-ic" id="mIc" aria-hidden="true">✓</div>
+    <h3 id="mTitle">Done!</h3>
+    <p id="mMsg"></p>
+    <button class="btn-p" onclick="closeModal()" style="width:100%;justify-content:center;margin-top:1.8rem">
+      <span class="bp-fill" aria-hidden="true"></span><span>Close</span>
+    </button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+<!-- Mobile bottom navigation bar — app-like UX -->
+<nav class="mbnav" id="mbnav" role="navigation" aria-label="Mobile bottom navigation">
+  <button class="mbn active" data-go="home" aria-label="Home">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    <span>Home</span>
+  </button>
+  <button class="mbn" data-go="tech" aria-label="Tech Events">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+    <span>Tech</span>
+  </button>
+  <button class="mbn mbn-reg" data-go="register" aria-label="Register">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+    <span>Register</span>
+  </button>
+  <button class="mbn" data-go="nontech" aria-label="Non-Tech Events">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+    <span>Non-Tech</span>
+  </button>
+  <button class="mbn" data-go="schedule" aria-label="Schedule">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    <span>Schedule</span>
+  </button>
+</nav>
+</body>
+</html>
