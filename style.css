@@ -1778,6 +1778,9 @@ img[loading="lazy"].loaded{opacity:1}
   .hi:nth-child(2n){border-right:none}
   .hi:nth-child(3),.hi:nth-child(4){border-bottom:none}
   .hi-sep{display:none}
+  /* Emoji slightly bigger on mobile so it's readable */
+  .hi-l{font-size:1rem}
+  .hi-v{font-size:.82rem}
 
   /* Countdown — single row, smaller */
   .cd-nums{flex-wrap:nowrap;gap:.3rem}
@@ -1789,7 +1792,7 @@ img[loading="lazy"].loaded{opacity:1}
   .cdu small{font-size:.46rem;letter-spacing:1.4px}
   .cds{font-size:1.3rem;margin-bottom:1.3rem}
 
-  /* CTAs */
+  /* CTAs — full width stack */
   .h-ctas{flex-direction:column;gap:.6rem}
   .btn-p,.btn-o{width:100%;justify-content:center;min-height:48px}
 
@@ -1799,11 +1802,20 @@ img[loading="lazy"].loaded{opacity:1}
   /* Sections */
   .gains{grid-template-columns:1fr 1fr}
   .sw{padding:3rem var(--pad)}
-  .ph-content{padding:3rem 0 2.5rem}
+  .ph-content{padding:2.5rem 0 2rem}
   .std{display:none}
   .st-row{gap:1.5rem;justify-content:center}
-  .rstrip{flex-direction:column;align-items:flex-start}
+
+  /* Registration strip — stack on mobile, full-width button */
+  .rstrip{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:1.2rem;
+    padding:1.6rem var(--padx);
+  }
   .rstrip .btn-p{width:100%;justify-content:center;min-height:48px}
+  .rs-h{font-size:.88rem;line-height:1.45}
+  .rs-s{font-size:.6rem;line-height:1.5}
 
   /* Footer */
   .ft-inner{grid-template-columns:1fr;gap:2rem;padding-top:2.5rem;padding-bottom:2rem}
@@ -1814,13 +1826,24 @@ img[loading="lazy"].loaded{opacity:1}
   .evchk{grid-template-columns:1fr 1fr}
   .ctform,.regform{padding:1.5rem}
 
-  /* Event cards */
+  /* Event cards — image shorter on mobile */
   .evc-body{padding:1.8rem 1.4rem}
   .evc-num{font-size:2.5rem}
+  .evc-img{height:220px}
 
-  /* Non-tech */
-  .ntc-row1 .ntc{min-height:200px}
-  .ntc-row2 .ntc{min-height:170px}
+  /* Non-tech bento — slightly taller so text breathes */
+  .ntc-row1 .ntc{min-height:210px}
+  .ntc-row2 .ntc{min-height:180px}
+
+  /* Guidelines grid — single col on mobile for readability */
+  .glg{grid-template-columns:1fr}
+  .glg p[style]{grid-column:auto}
+
+  /* reg-notice — already has media query in its own block */
+
+  /* Coordinator cards — 2 col at 768 is fine, single below 480 */
+  .coord-grid{grid-template-columns:1fr 1fr;gap:.8rem}
+  .coord-card{padding:1.2rem 1rem}
 
   /* Venue */
   .venue-sw{padding-top:1.5rem;padding-bottom:1.5rem}
@@ -1831,6 +1854,9 @@ img[loading="lazy"].loaded{opacity:1}
   .evvl{display:none}
   .evn{writing-mode:initial;transform:none;font-size:1rem}
   .evr{padding:1.5rem 1rem}
+
+  /* glbox last item full-width span */
+  .glg p:last-child{grid-column:1 / -1}
 }
 
 /* ── 480px: small phones ── */
@@ -1845,6 +1871,7 @@ img[loading="lazy"].loaded{opacity:1}
   /* Hero */
   .hero{padding-top:1.4rem}
   .h-title{font-size:clamp(2.8rem,18vw,5rem)}
+  .h-dept{font-size:.8rem;line-height:1.5}
 
   /* Mosaic */
   .ev-mosaic{min-height:190px}
@@ -1854,8 +1881,8 @@ img[loading="lazy"].loaded{opacity:1}
 
   /* Info row → still 2×2 but tighter */
   .hi{padding:.45rem .6rem}
-  .hi-v{font-size:.68rem}
-  .hi-l{font-size:.75rem}
+  .hi-v{font-size:.72rem}
+  .hi-l{font-size:.9rem}
 
   /* Countdown → clean 2×2 grid */
   .cd-nums{
@@ -1896,32 +1923,39 @@ img[loading="lazy"].loaded{opacity:1}
 
   /* Forms */
   .coord-grid{grid-template-columns:1fr}
+  .coord-card{padding:1.1rem .9rem}
   .evchk{grid-template-columns:1fr}
   .ctform,.regform{padding:1.2rem}
   .fld input,.fld select,.fld textarea{font-size:.9rem}
 
   /* Tech events */
-  .evc-img{height:200px}
+  .evc-img{height:195px}
   .evc-body{padding:1.2rem .9rem}
   .evc-num{font-size:1.8rem}
   .evc-name{font-size:.88rem}
   .evc-desc{font-size:.88rem}
   .evc-fmt{font-size:.58rem}
+  /* Tags wrap cleanly on small phones */
+  .evc-tags{flex-wrap:wrap;gap:.35rem}
+  .evc-tags span{font-size:.54rem;padding:.2em .6em}
 
   /* Non-tech bento */
-  .ntc-row1 .ntc{min-height:180px}
-  .ntc-row2 .ntc{min-height:155px}
+  .ntc-row1 .ntc{min-height:185px}
+  .ntc-row2 .ntc{min-height:160px}
   .ntc-name{font-size:.86rem}
   .ntc-fmt{font-size:.54rem}
-  .ntc-desc{display:none}
+  /* Hide desc only on very small so card isn't empty */
+  .ntc-desc{font-size:.82rem;-webkit-line-clamp:2;line-clamp:2}
   .ntc-tags span{font-size:.5rem}
 
-  /* Timeline */
+  /* Timeline — give time column enough room, prevent overlap */
   .tl::before{left:50px}
-  .tlr{grid-template-columns:50px 1px 1fr;gap:0 .7rem}
-  .tlt{font-size:.56rem;padding:.35em .6em}
+  .tlr{grid-template-columns:50px 1px 1fr;gap:0 .8rem;margin-bottom:2rem}
+  .tlt{font-size:.54rem;padding:.28em .5em;line-height:1.25}
+  .tlt small{font-size:.48rem;letter-spacing:1.5px;margin-top:.1rem}
   .tltitle{font-size:.88rem}
   .tldesc{font-size:.8rem}
+  .tlb{padding:.6rem .9rem 1rem}
 
   /* Map */
   .mapbox{height:250px}
@@ -1930,6 +1964,10 @@ img[loading="lazy"].loaded{opacity:1}
   .sw{padding:2.5rem var(--pad)}
   .sec-head{margin-bottom:2rem}
   .eye{font-size:.58rem}
+
+  /* Page hero heading on small phones */
+  .ph-content h1{font-size:clamp(1.8rem,10vw,3rem)}
+  .ph-sub{font-size:.9rem}
 
   /* Venue */
   .venue-sw{padding-top:1rem;padding-bottom:1rem}
@@ -1940,6 +1978,17 @@ img[loading="lazy"].loaded{opacity:1}
   .venue-chips{gap:.4rem}
   .venue-chips span{font-size:.56rem;padding:.3em .7em}
   .venue-pill{bottom:.75rem;right:.75rem;font-size:.52rem}
+
+  /* glbox guidelines on phones — tighter */
+  .glbox{padding:1.4rem var(--padx)}
+  .glh{font-size:.8rem;letter-spacing:1.5px;margin-bottom:1.2rem}
+  .glg p{font-size:.82rem;line-height:1.6}
+
+  /* reg-notice pills stack neatly */
+  .reg-notice{gap:.6rem;padding:.9rem var(--padx)}
+  .rn-pill{gap:.25rem}
+  .rn-pill span{font-size:.58rem}
+  .rn-pill strong{font-size:.7rem}
 
   /* Footer */
   .ft-logo img{width:36px;height:36px}
