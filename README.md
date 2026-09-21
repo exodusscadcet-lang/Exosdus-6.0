@@ -51,8 +51,28 @@ sympo/
 
 ## 📝 Registration
 - **Online Form:** [EXODUS 6.0 Registration Form](https://docs.google.com/forms/d/e/1FAIpQLScFHcRgMA0YaFjp3Iz-eTQQkf1WfNG145o3Hko9-prMbP4rpQ/viewform?usp=dialog)
-- **Fee:** ₹250 per head (Food & refreshments included)
-- **Mode:** Online via Google Form or on-spot at the venue
+- **Fee:** ₹250 per head (Lunch & refreshments included)
+- **Online Registration Closes:** October 05, 2026 at 10:00 PM
+- **On-Spot Registration Starts:** October 06, 2026 at 8:30 AM (Venue Desk)
+
+## ⏰ Day Schedule (Oct 06, 2026)
+| Time | Event | Venue |
+|---|---|---|
+| **08:30 AM** | Registration & Check-In (On-spot opens) | Registration Desk |
+| **09:30 AM** | Inauguration Ceremony | Main Auditorium |
+| **10:00 AM** | Technical Events Start | Seminar Hall & CSE Labs |
+| **11:30 AM** | Non-Technical Events Start | Campus Grounds & Arena |
+| **12:40 PM** | Lunch & Refreshments | Dining Hall & Food Court |
+| **03:30 PM** | Valedictory & Awards Ceremony | Main Auditorium |
+
+## 📜 Symposium Rules
+1. Participants can choose **ONLY ONE** Technical Event and **ONE** Non-Technical Event.
+2. Participants must carry a valid college ID card for entry and event verification.
+3. Participation certificates will be issued to all registered participants.
+4. Participants must follow the event schedules strictly. Late entries may be disqualified.
+5. Participants are expected to maintain proper decorum and professionalism throughout the event.
+6. The registration fee of ₹250 is non-refundable once paid.
+7. The decision of the Event Coordinators / Judges will be final and binding.
 
 ## 📞 Contact
 - **Student Coordinator:** Navin Ganesh S (+91 77087 08780)
