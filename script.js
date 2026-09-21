@@ -40,19 +40,24 @@
 /* ─────────────────────────────────────────────
    NAVIGATION
 ───────────────────────────────────────────── */
+const REGISTER_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScFHcRgMA0YaFjp3Iz-eTQQkf1WfNG145o3Hko9-prMbP4rpQ/viewform?usp=dialog';
+
 const PAGES = {
   home:     'pg-home',
   tech:     'pg-tech',
   nontech:  'pg-nontech',
   schedule: 'pg-schedule',
   contact:  'pg-contact',
-  register: 'pg-register',
 };
 
 let current = 'home';
 const pto = document.getElementById('pto');
 
 function navigate(id) {
+  if (id === 'register') {
+    window.open(REGISTER_FORM_URL, '_blank', 'noopener,noreferrer');
+    return;
+  }
   if (!PAGES[id]) return;
   if (id === current) { window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
 
@@ -467,13 +472,31 @@ function addEvHover() {
 ───────────────────────────────────────────── */
 function contactSubmit(e) {
   e.preventDefault();
-  openModal('✉️', 'Message Sent!', 'Our team will get back to you shortly. Thank you for reaching out to EXODUS 6.0.');
-  e.target.reset();
-}
+  const nameInput = document.getElementById('cf-name');
+  const emailInput = document.getElementById('cf-email');
+  const subInput = document.getElementById('cf-sub');
+  const msgInput = document.getElementById('cf-msg');
 
-function registerSubmit(e) {
-  e.preventDefault();
-  openModal('🎓', 'Registration Submitted!', 'You\'re registered for EXODUS 6.0! We\'ll confirm shortly. See you on October 6, 2026 at SCAD College, Tirunelveli.');
+  const name = nameInput ? nameInput.value.trim() : '';
+  const email = emailInput ? emailInput.value.trim() : '';
+  const sub = (subInput && subInput.value.trim()) || 'Inquiry';
+  const msg = msgInput ? msgInput.value.trim() : '';
+
+  if (!name || !email || !msg) {
+    openModal('⚠️', 'Missing Information', 'Please fill in your name, email address, and message before sending.');
+    return;
+  }
+
+  // Construct mailto link
+  const subject = encodeURIComponent(`[EXODUS 6.0] ${sub} - ${name}`);
+  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nSubject: ${sub}\n\nMessage:\n${msg}`);
+  const mailtoUrl = `mailto:exodusscadcet@gmail.com?subject=${subject}&body=${body}`;
+
+  // Launch email client
+  window.location.href = mailtoUrl;
+
+  openModal('✉️', 'Message Ready to Send', `We've prepared your message for exodusscadcet@gmail.com in your email app. Simply hit send!\n\nIf your email app didn't open, feel free to write directly to:\nexodusscadcet@gmail.com`);
+
   e.target.reset();
 }
 

@@ -49,8 +49,13 @@ sympo/
 | 04 | Memory Challenge | Individual | Multiple rounds |
 | 05 | Dumb Charades | Team | Multiple rounds |
 
+## 📝 Registration
+- **Online Form:** [EXODUS 6.0 Registration Form](https://docs.google.com/forms/d/e/1FAIpQLScFHcRgMA0YaFjp3Iz-eTQQkf1WfNG145o3Hko9-prMbP4rpQ/viewform?usp=dialog)
+- **Fee:** ₹250 per head (Food & refreshments included)
+- **Mode:** Online via Google Form or on-spot at the venue
+
 ## 📞 Contact
-- **Student Coordinator:** Navin Ganesh S (+91 77037 08780)
+- **Student Coordinator:** Navin Ganesh S (+91 77087 08780)
 - **Staff Coordinator:** Prof. K. Mari Raj Kumar (CSE Dept)
 - **Convenor:** Mrs. C. Anuradha (HOD / CSE Dept)
 - **Principal:** Dr. K. Ganesan
