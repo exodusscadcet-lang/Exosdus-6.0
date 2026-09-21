@@ -24,10 +24,10 @@ sympo/
 ├── ev_prompt.jpg     # Event image — Prompt Battle
 ├── ev_code.jpg       # Event image — Code Completion
 ├── ev_treasure.jpg   # Event image — Treasure Hunt
-├── ev_esports.jpg    # Event image — E-Sports
+├── ev_cricket.jpg    # Event image — Box Cricket
 ├── ev_findyou.jpg    # Event image — Find If You Can
 ├── ev_memory.jpg     # Event image — Memory Challenge
-└── ev_cricket.jpg    # Event image — Box Cricket
+└── ev_dumb_charades.jpg # Event image — Dumb Charades
 ```
 
 ## 🎯 Events
@@ -44,21 +44,23 @@ sympo/
 | # | Event | Team Size | Format |
 |---|-------|-----------|--------|
 | 01 | Treasure Hunt | Team of 3 | 2 hours |
-| 02 | E-Sports | Squad of 4 | Knockout |
+| 02 | Box Cricket | Team of 6 | 6 overs |
 | 03 | Find If You Can | Individual / Pair | 30 min |
 | 04 | Memory Challenge | Individual | Multiple rounds |
-| 05 | Box Cricket | Team of 6 | 6 overs |
+| 05 | Dumb Charades | Team | Multiple rounds |
+
+## 📞 Contact
+- **Student Coordinator:** Navin Ganesh S (+91 77037 08780)
+- **Staff Coordinator:** Prof. K. Mari Raj Kumar (CSE Dept)
+- **Convenor:** Mrs. C. Anuradha (HOD / CSE Dept)
+- **Principal:** Dr. K. Ganesan
+- **Official Email:** exodusscadcet@gmail.com
 
 ## 🛠️ Tech Stack
 - Pure **HTML5 · CSS3 · Vanilla JavaScript** — no frameworks, no dependencies
 - Fonts: Orbitron · Inter · JetBrains Mono (Google Fonts)
 - Fully responsive — mobile-first design with bottom navigation bar
 - Green theme matching the official EXODUS 6.0 poster
-
-## ✏️ To Do
-- [ ] Link Google Form to Register buttons
-- [ ] Add coordinator contact details
-- [ ] Deploy to GitHub Pages / Netlify
 
 ---
 
