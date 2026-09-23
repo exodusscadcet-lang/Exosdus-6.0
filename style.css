@@ -1052,8 +1052,26 @@ button{border:none;background:none;color:inherit}
   font-family:var(--f1);font-size:.82rem;font-weight:700;
   color:var(--tw);margin-bottom:.35rem;letter-spacing:.5px;
 }
-.tlb p{font-size:.88rem;color:var(--td);line-height:1.65;margin-bottom:.5rem;font-weight:400}
-.tlv{font-family:var(--f3);font-size:.58rem;letter-spacing:1.5px;color:var(--tdd);text-transform:uppercase}
+.tlb p{font-size:.88rem;color:rgba(240,253,244,.72);line-height:1.65;margin-bottom:.65rem;font-weight:400}
+.tlv{
+  display:inline-flex;align-items:center;gap:.45rem;
+  font-family:var(--f3);font-size:.76rem;font-weight:600;
+  letter-spacing:.3px;color:var(--g3);
+  background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.28);
+  border-radius:6px;padding:.32em .8em;margin-top:.4rem;
+  transition:background var(--tr),border-color var(--tr),color var(--tr);
+}
+.tlr:hover .tlv{background:rgba(34,197,94,.18);border-color:var(--g4);color:var(--tw)}
+.gold-b .tlv{
+  color:var(--gold) !important;
+  background:rgba(251,191,36,.1) !important;
+  border-color:rgba(251,191,36,.32) !important;
+}
+.tlr:hover .gold-b .tlv{
+  background:rgba(251,191,36,.2) !important;
+  border-color:var(--gold) !important;
+  color:#fff !important;
+}
 
 /* ═══════════════════════════════════════════════════
    COORDINATOR CARDS — contact page
@@ -2071,6 +2089,7 @@ img[loading="lazy"].loaded{opacity:1}
   .tltitle{font-size:.88rem}
   .tldesc{font-size:.8rem}
   .tlb{padding:.6rem .9rem 1rem}
+  .tlv{font-size:.7rem;padding:.26em .65em}
 
   /* Map */
   .mapbox{height:250px}
