@@ -58,12 +58,12 @@ sympo/
 ## ⏰ Day Schedule (Oct 06, 2026)
 | Time | Event | Venue |
 |---|---|---|
-| **08:30 AM** | Registration & Check-In (On-spot opens) | Registration Desk |
-| **09:30 AM** | Inauguration Ceremony | Main Auditorium |
-| **10:00 AM** | Technical Events Start | Seminar Hall & CSE Labs |
-| **11:30 AM** | Non-Technical Events Start | Campus Grounds & Arena |
-| **12:40 PM** | Lunch & Refreshments | Dining Hall & Food Court |
-| **03:30 PM** | Valedictory & Awards Ceremony | Main Auditorium |
+| **08:30 AM** | Registration & Check-In (On-spot opens) | College Portico |
+| **09:30 AM** | Inauguration Ceremony | MB 119 |
+| **10:00 AM** | Technical Events Start | CSE Labs |
+| **11:30 AM** | Non-Technical Events Start | Labs & Allocated Classrooms |
+| **12:40 PM** | Lunch & Refreshments | Dining Hall · Campus Food Stalls |
+| **03:30 PM** | Valedictory & Awards Ceremony | MB 119 |
 
 ## 📜 Symposium Rules
 1. Participants can choose **ONLY ONE** Technical Event and **ONE** Non-Technical Event.
