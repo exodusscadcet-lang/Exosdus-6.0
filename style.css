@@ -1378,14 +1378,42 @@ button{border:none;background:none;color:inherit}
   border:1px solid rgba(34,197,94,.16);
   color:var(--g5);background:rgba(34,197,94,.04);
 }
+/* Tech Event In-charges & Contact */
+.evc-leads{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:.9rem;padding-top:.85rem;margin-top:.4rem;
+  border-top:1px solid rgba(34,197,94,.09);flex-wrap:wrap;
+}
+.evc-lead-group{display:flex;flex-direction:column;gap:.2rem;flex:1;min-width:200px}
+.evc-lead-lbl{
+  font-family:var(--f3);font-size:.52rem;letter-spacing:1.5px;
+  color:var(--g5);text-transform:uppercase;font-weight:600;
+}
+.evc-lead-names{
+  font-size:.82rem;color:var(--tw);font-weight:500;line-height:1.45;
+}
+.evc-lead-phone{
+  display:inline-flex;align-items:center;gap:.45rem;
+  font-family:var(--f3);font-size:.68rem;font-weight:600;
+  letter-spacing:.5px;color:var(--g4);
+  background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.2);
+  border-radius:50px;padding:.36em .85em;text-decoration:none;
+  transition:background var(--tr),border-color var(--tr),transform var(--tr),color var(--tr),box-shadow var(--tr);
+  white-space:nowrap;
+}
+.evc-lead-phone:hover{
+  background:rgba(34,197,94,.16);border-color:var(--g4);
+  color:var(--tw);transform:translateY(-1px);
+  box-shadow:0 0 14px rgba(34,197,94,.25);
+}
 
 /* ═══════════════════════════════════════════════════
    NON-TECH BENTO CARD GRID
 ═══════════════════════════════════════════════════ */
 .ntc-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:3rem}
 .ntc-row1,.ntc-row2{display:flex;gap:10px}
-.ntc-row1 .ntc{flex:1;min-height:300px}
-.ntc-row2 .ntc{flex:1;min-height:240px}
+.ntc-row1 .ntc{flex:1;min-height:340px}
+.ntc-row2 .ntc{flex:1;min-height:310px}
 .ntc{
   position:relative;border-radius:14px;overflow:hidden;
   cursor:default;
@@ -1402,7 +1430,7 @@ button{border:none;background:none;color:inherit}
 .ntc:hover .ntc-img{transform:scale(1.07);filter:saturate(1.35) brightness(.82)}
 .ntc-ov{
   position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(2,9,4,.12) 0%,rgba(2,9,4,.04) 30%,rgba(2,9,4,.8) 100%);
+  background:linear-gradient(180deg,rgba(2,9,4,.12) 0%,rgba(2,9,4,.25) 25%,rgba(2,9,4,.88) 75%,rgba(2,9,4,.98) 100%);
   pointer-events:none;
 }
 .ntc-body{
@@ -1436,6 +1464,35 @@ button{border:none;background:none;color:inherit}
   padding:.18em .6em;border-radius:50px;
   border:1px solid rgba(251,191,36,.2);
   color:rgba(251,191,36,.75);background:rgba(251,191,36,.05);
+}
+/* Non-Tech Event In-charges & Contact */
+.ntc-leads{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  gap:.65rem;padding-top:.75rem;margin-top:.35rem;
+  border-top:1px solid rgba(251,191,36,.14);flex-wrap:wrap;
+}
+.ntc-lead-group{display:flex;flex-direction:column;gap:.2rem;flex:1;min-width:180px}
+.ntc-lead-lbl{
+  font-family:var(--f3);font-size:.5rem;letter-spacing:1.5px;
+  color:rgba(251,191,36,.85);text-transform:uppercase;font-weight:600;
+}
+.ntc-lead-names{
+  font-size:.76rem;color:var(--tw);font-weight:500;line-height:1.4;
+  text-shadow:0 1px 8px rgba(0,0,0,.85);
+}
+.ntc-lead-phone{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-family:var(--f3);font-size:.64rem;font-weight:600;
+  letter-spacing:.5px;color:var(--gold);
+  background:rgba(251,191,36,.09);border:1px solid rgba(251,191,36,.25);
+  border-radius:50px;padding:.32em .8em;text-decoration:none;
+  transition:background var(--tr),border-color var(--tr),transform var(--tr),color var(--tr),box-shadow var(--tr);
+  white-space:nowrap;backdrop-filter:blur(8px);
+}
+.ntc-lead-phone:hover{
+  background:rgba(251,191,36,.22);border-color:var(--gold);
+  color:#fff;transform:translateY(-1px);
+  box-shadow:0 0 14px rgba(251,191,36,.3);
 }
 
 /* ═══════════════════════════════════════════════════
@@ -1885,9 +1942,9 @@ img[loading="lazy"].loaded{opacity:1}
   .evc-num{font-size:2.5rem}
   .evc-img{height:220px}
 
-  /* Non-tech bento — slightly taller so text breathes */
-  .ntc-row1 .ntc{min-height:210px}
-  .ntc-row2 .ntc{min-height:180px}
+  /* Non-tech bento — comfortable height for in-charges and contact */
+  .ntc-row1 .ntc{min-height:260px}
+  .ntc-row2 .ntc{min-height:240px}
 
   /* Guidelines grid — single col on mobile for readability */
   .glg{grid-template-columns:1fr}
@@ -1992,15 +2049,19 @@ img[loading="lazy"].loaded{opacity:1}
   /* Tags wrap cleanly on small phones */
   .evc-tags{flex-wrap:wrap;gap:.35rem}
   .evc-tags span{font-size:.54rem;padding:.2em .6em}
+  .evc-leads{flex-direction:column;align-items:flex-start;gap:.5rem}
+  .evc-lead-phone{width:100%;justify-content:center;padding:.42em 1em}
 
   /* Non-tech bento */
-  .ntc-row1 .ntc{min-height:185px}
-  .ntc-row2 .ntc{min-height:160px}
+  .ntc-row1 .ntc{min-height:230px}
+  .ntc-row2 .ntc{min-height:215px}
   .ntc-name{font-size:.86rem}
   .ntc-fmt{font-size:.54rem}
   /* Hide desc only on very small so card isn't empty */
   .ntc-desc{font-size:.82rem;-webkit-line-clamp:2;line-clamp:2}
   .ntc-tags span{font-size:.5rem}
+  .ntc-leads{flex-direction:column;align-items:flex-start;gap:.4rem}
+  .ntc-lead-phone{align-self:flex-start;padding:.32em .75em}
 
   /* Timeline — give time column enough room, prevent overlap */
   .tl::before{left:50px}
