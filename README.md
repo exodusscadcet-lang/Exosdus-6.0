@@ -33,21 +33,21 @@ sympo/
 ## 🎯 Events
 
 ### Tech Events
-| # | Event | Team Size | Duration |
-|---|-------|-----------|----------|
-| 01 | Paper Presentation | 1–3 members | 10 min + Q&A |
-| 02 | Technical Quiz | Team of 2 | 1.5 hours |
-| 03 | Prompt Battle | Individual / Pair | 45 min |
-| 04 | Code Completion | Individual | 1 hour |
+| # | Event | Team Size | Duration / Format | Location |
+|---|-------|-----------|-------------------|----------|
+| 01 | Paper Presentation | Max 4 per team | 10 min + Q&A | MB 113 & MB 119 |
+| 02 | Technical Quiz | Individual | Rapid & Buzzer Rounds | MB 306 |
+| 03 | Prompt Battle | Individual | 45 min | CSE Lab |
+| 04 | Code Completion | Individual | 1 hour | CSE Lab |
 
 ### Non-Tech Events
-| # | Event | Team Size | Format |
-|---|-------|-----------|--------|
-| 01 | Treasure Hunt | Team of 3 | 2 hours |
-| 02 | Box Cricket | Team of 6 | 6 overs |
-| 03 | Find If You Can | Individual / Pair | 30 min |
-| 04 | Memory Challenge | Individual | Multiple rounds |
-| 05 | Dumb Charades | Team | Multiple rounds |
+| # | Event | Team Size | Format | Location |
+|---|-------|-----------|--------|----------|
+| 01 | Treasure Hunt | Team of 3 | Campus-Wide | — |
+| 02 | Box Cricket | Team of 4 | 2 overs | — |
+| 03 | Find If You Can | 3–4 per team | 30 min | MB 306 |
+| 04 | Memory Challenge | Team of 3 | Multiple rounds | MB 113 |
+| 05 | Dumb Charades | Team of 3 | Multiple rounds | — |
 
 ## 📝 Registration
 - **Online Form:** [EXODUS 6.0 Registration Form](https://docs.google.com/forms/d/e/1FAIpQLScFHcRgMA0YaFjp3Iz-eTQQkf1WfNG145o3Hko9-prMbP4rpQ/viewform?usp=dialog)
@@ -59,11 +59,11 @@ sympo/
 | Time | Event | Venue |
 |---|---|---|
 | **08:30 AM** | Registration & Check-In (On-spot opens) | College Portico |
-| **09:30 AM** | Inauguration Ceremony | MB 119 |
-| **10:00 AM** | Technical Events Start | CSE Labs |
-| **11:30 AM** | Non-Technical Events Start | Labs & Allocated Classrooms |
+| **09:30 AM** | Inauguration Ceremony | Babu Auditorium |
+| **10:00 AM** | Technical Events Start | Refer Specific Events |
 | **12:40 PM** | Lunch & Refreshments | Dining Hall · Campus Food Stalls |
-| **03:30 PM** | Valedictory & Awards Ceremony | MB 119 |
+| **01:30 PM** | Non-Technical Events Start | Refer Specific Events |
+| **03:30 PM** | Valedictory & Awards Ceremony | Babu Auditorium |
 
 ## 📜 Symposium Rules
 1. Participants can choose **ONLY ONE** Technical Event and **ONE** Non-Technical Event.
