@@ -35,7 +35,7 @@ sympo/
 ### Tech Events
 | # | Event | Team Size | Duration / Format | Location |
 |---|-------|-----------|-------------------|----------|
-| 01 | Paper Presentation | Max 4 per team | 10 min + Q&A | MB 113 & MB 119 |
+| 01 | Paper Presentation | Max 4 per team | 5 min + Q&A | MB 113 & MB 119 |
 | 02 | Technical Quiz | Individual | Rapid & Buzzer Rounds | MB 306 |
 | 03 | Prompt Battle | Individual | 45 min | CSE Lab |
 | 04 | Code Completion | Individual | 1 hour | CSE Lab |
