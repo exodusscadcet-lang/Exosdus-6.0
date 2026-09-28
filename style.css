@@ -25,8 +25,8 @@
   --tw:   #f0fdf4;
   --tb:   #d1fae5;
   --tm:   #6ee7b7;
-  --td:   #34694a;
-  --tdd:  #1d3f2a;
+  --td:   #86c49a;
+  --tdd:  #4d9166;
 
   --f1: 'Orbitron', sans-serif;
   --f2: 'Inter', sans-serif;
@@ -696,7 +696,7 @@ button{border:none;background:none;color:inherit}
 }
 .sl{
   font-family:var(--f3);font-size:.58rem;letter-spacing:2.5px;
-  color:var(--td);text-transform:uppercase;text-align:center;
+  color:var(--tm);text-transform:uppercase;text-align:center;
 }
 .std{width:1px;height:44px;background:rgba(34,197,94,.1)}
 .st-prize{color:rgba(251,191,36,.9) !important;text-shadow:0 0 20px rgba(251,191,36,.4) !important}
@@ -736,7 +736,7 @@ button{border:none;background:none;color:inherit}
   color:var(--g4);letter-spacing:1px;text-transform:uppercase;
   margin-bottom:.5rem;
 }
-.gb p{font-size:.9rem;color:var(--td);line-height:1.7;font-weight:400}
+.gb p{font-size:.9rem;color:var(--tb);line-height:1.7;font-weight:400}
 
 /* Registration strip */
 .rstrip{
@@ -751,7 +751,7 @@ button{border:none;background:none;color:inherit}
 }
 .rs-h{font-size:.97rem;color:var(--tw);font-weight:500;margin-bottom:.2rem}
 .rs-h strong{color:var(--g4)}
-.rs-s{font-family:var(--f3);font-size:.62rem;letter-spacing:1px;color:var(--td)}
+.rs-s{font-family:var(--f3);font-size:.62rem;letter-spacing:1px;color:var(--tm)}
 
 /* ═══════════════════════════════════════════════════
    EVENTS PREVIEW
@@ -777,7 +777,7 @@ button{border:none;background:none;color:inherit}
 .nt-badge{color:var(--gold)}
 .pclink{
   font-family:var(--f3);font-size:.6rem;letter-spacing:1.5px;
-  color:var(--td);cursor:pointer;
+  color:var(--g5);cursor:pointer;
   transition:color var(--tr),letter-spacing var(--tr);
 }
 .pclink:hover{color:var(--g4);letter-spacing:2.5px}
@@ -786,7 +786,7 @@ button{border:none;background:none;color:inherit}
 .pcl li{
   counter-increment:pcl;
   display:flex;align-items:center;gap:1rem;
-  padding:.8rem 0;border-bottom:1px solid rgba(34,197,94,.05);
+  padding:.8rem 0;border-bottom:1px solid rgba(34,197,94,.07);
   font-size:.97rem;color:var(--tm);font-weight:400;
   transition:color var(--tr),padding-left var(--tr);cursor:default;
 }
@@ -794,10 +794,10 @@ button{border:none;background:none;color:inherit}
 .pcl li::before{
   content:counter(pcl,decimal-leading-zero);
   font-family:var(--f3);font-size:.6rem;font-weight:700;
-  color:var(--g7);min-width:22px;
+  color:var(--g5);min-width:22px;
 }
 .pcl li:hover{color:var(--tw);padding-left:.5rem}
-.gold-pcl li::before{color:rgba(251,191,36,.4)}
+.gold-pcl li::before{color:rgba(251,191,36,.6)}
 .gold-pcl li:hover{color:var(--gold)}
 
 /* ═══════════════════════════════════════════════════
@@ -836,7 +836,7 @@ button{border:none;background:none;color:inherit}
   margin-bottom:.6rem;
 }
 .ph-content h1 em{font-style:normal;color:var(--g5);text-shadow:var(--gs)}
-.ph-sub{font-size:1rem;color:var(--td);max-width:480px;line-height:1.6}
+.ph-sub{font-size:1rem;color:var(--tb);max-width:480px;line-height:1.6}
 
 /* ═══════════════════════════════════════════════════
    EVENTS LIST — editorial
@@ -919,12 +919,12 @@ button{border:none;background:none;color:inherit}
   display:grid;grid-template-columns:1fr 1fr;gap:.6rem 3rem;
 }
 .glg p{
-  font-size:.9rem;color:var(--td);line-height:1.65;
+  font-size:.9rem;color:var(--tb);line-height:1.65;
   font-weight:400;padding-left:.9rem;position:relative;
 }
-.glg p::before{content:'›';position:absolute;left:0;color:var(--g6);font-weight:700}
+.glg p::before{content:'›';position:absolute;left:0;color:var(--g5);font-weight:700}
 .glg p strong{color:var(--tw);font-weight:600}
-.gold-gl .glg p::before{color:rgba(251,191,36,.5)}
+.gold-gl .glg p::before{color:rgba(251,191,36,.6)}
 
 /* Registration highlight banner inside guidelines */
 .reg-notice{
@@ -937,11 +937,11 @@ button{border:none;background:none;color:inherit}
   background:rgba(251,191,36,.04);border-color:rgba(251,191,36,.14);
 }
 .rn-pill{display:flex;flex-direction:column;gap:.15rem}
-.rn-pill span{font-family:var(--f3);font-size:.55rem;letter-spacing:1.5px;color:var(--td);text-transform:uppercase}
+.rn-pill span{font-family:var(--f3);font-size:.55rem;letter-spacing:1.5px;color:var(--tm);text-transform:uppercase}
 .rn-pill strong{font-family:var(--f1);font-size:.78rem;color:var(--g4);font-weight:700}
 .gold-gl .rn-pill strong{color:var(--gold)}
-.rn-sep{width:1px;height:24px;background:rgba(34,197,94,.12)}
-.gold-gl .rn-sep{background:rgba(251,191,36,.14)}
+.rn-sep{width:1px;height:24px;background:rgba(34,197,94,.15)}
+.gold-gl .rn-sep{background:rgba(251,191,36,.18)}
 @media(max-width:768px){
   .reg-notice{flex-direction:column;align-items:flex-start;gap:.75rem}
   .rn-sep{display:none}
@@ -1109,20 +1109,20 @@ button{border:none;background:none;color:inherit}
 .coord-info{display:flex;flex-direction:column;gap:.25rem;min-width:0}
 .coord-role{
   font-family:var(--f3);font-size:.55rem;letter-spacing:1.5px;
-  text-transform:uppercase;color:var(--td);
+  text-transform:uppercase;color:var(--tm);
 }
 .coord-name{
   font-family:var(--f1);font-size:.82rem;font-weight:700;
   color:var(--tw);line-height:1.2;margin:0;
 }
-.coord-dept{font-size:.75rem;color:var(--td)}
+.coord-dept{font-size:.75rem;color:var(--tb)}
 .coord-phone{
   display:inline-flex;align-items:center;gap:.35rem;
   font-family:var(--f3);font-size:.7rem;letter-spacing:.5px;
-  color:var(--g5);text-decoration:none;margin-top:.1rem;
+  color:var(--g4);text-decoration:none;margin-top:.1rem;
   transition:color var(--tr);
 }
-.coord-phone:hover{color:var(--g4)}
+.coord-phone:hover{color:var(--g3)}
 
 /* ntc-tag-inline (Chess label inside E-Sports heading) */
 .ntc-tag-inline{
@@ -1153,7 +1153,7 @@ button{border:none;background:none;color:inherit}
   font-family:var(--f1);font-size:.62rem;letter-spacing:2px;
   color:var(--g4);text-transform:uppercase;margin-bottom:.35rem;
 }
-.cti p{font-size:.87rem;color:var(--td);line-height:1.7;font-weight:400}
+.cti p{font-size:.87rem;color:var(--tb);line-height:1.7;font-weight:400}
 
 /* Forms */
 .ctform,.regform{
@@ -1326,7 +1326,7 @@ button{border:none;background:none;color:inherit}
   font-size:1.5rem;box-shadow:var(--gs);
 }
 .mb h3{font-family:var(--f1);font-size:.95rem;font-weight:700;color:var(--g4);letter-spacing:1px;margin-bottom:.55rem}
-.mb p{font-size:.9rem;color:var(--td);line-height:1.65;font-weight:400;white-space:pre-line}
+.mb p{font-size:.9rem;color:var(--tb);line-height:1.65;font-weight:400;white-space:pre-line}
 
 /* ═══════════════════════════════════════════════════
    TECH EVENT VISUAL CARDS
@@ -1461,7 +1461,7 @@ button{border:none;background:none;color:inherit}
 .ntc:hover .ntc-img{transform:scale(1.07);filter:saturate(1.35) brightness(.82)}
 .ntc-ov{
   position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(2,9,4,.12) 0%,rgba(2,9,4,.25) 25%,rgba(2,9,4,.88) 75%,rgba(2,9,4,.98) 100%);
+  background:linear-gradient(180deg,rgba(2,9,4,.05) 0%,rgba(2,9,4,.18) 30%,rgba(2,9,4,.72) 70%,rgba(2,9,4,.88) 100%);
   pointer-events:none;
 }
 .ntc-body{
