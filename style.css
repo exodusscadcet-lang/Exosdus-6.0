@@ -2176,3 +2176,98 @@ img[loading="lazy"].loaded{opacity:1}
   .mbnav{display:none !important}
   #app{padding-bottom:0 !important}
 }
+
+/* ═══════════════════════════════════════════════════
+   MAP HEADER + GET DIRECTIONS BUTTON
+═══════════════════════════════════════════════════ */
+.map-header{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:.85rem;flex-wrap:wrap;gap:.6rem;
+}
+.map-title{
+  font-family:var(--f1);font-size:.72rem;font-weight:700;
+  color:var(--g4);letter-spacing:1px;text-transform:uppercase;
+}
+.btn-directions{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-family:var(--f3);font-size:.7rem;font-weight:600;
+  letter-spacing:.5px;color:var(--g4);
+  background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.25);
+  border-radius:50px;padding:.45em 1.1em;text-decoration:none;
+  transition:background var(--tr),border-color var(--tr),color var(--tr),box-shadow var(--tr);
+  white-space:nowrap;
+}
+.btn-directions:hover{
+  background:rgba(34,197,94,.18);border-color:var(--g4);color:var(--tw);
+  box-shadow:0 0 16px rgba(34,197,94,.25);
+}
+
+/* ═══════════════════════════════════════════════════
+   FAQ SECTION
+═══════════════════════════════════════════════════ */
+.faq-list{
+  display:flex;flex-direction:column;
+  border:1px solid rgba(34,197,94,.1);
+  border-radius:var(--rl);overflow:hidden;
+  background:var(--bg1);
+}
+.faq-item{
+  border-bottom:1px solid rgba(34,197,94,.08);
+}
+.faq-item:last-child{border-bottom:none}
+.faq-item summary{
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:1.1rem 1.5rem;cursor:pointer;
+  font-family:var(--f2);font-size:.96rem;font-weight:600;
+  color:var(--tw);line-height:1.4;
+  list-style:none;
+  transition:background var(--tr),color var(--tr);
+  position:relative;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{
+  content:'+';
+  font-family:var(--f1);font-size:1.1rem;font-weight:700;
+  color:var(--g5);flex-shrink:0;
+  transition:transform .25s ease,color var(--tr);
+}
+.faq-item[open] summary::after{
+  transform:rotate(45deg);color:var(--g4);
+}
+.faq-item summary:hover{background:rgba(34,197,94,.04);color:var(--g4)}
+.faq-item[open] summary{
+  background:rgba(34,197,94,.05);color:var(--g4);
+  border-bottom:1px solid rgba(34,197,94,.08);
+}
+.faq-item p{
+  padding:.9rem 1.5rem 1.2rem;
+  font-size:.92rem;color:var(--tb);line-height:1.78;font-weight:400;
+  background:rgba(34,197,94,.02);
+}
+.faq-item p strong{color:var(--tw);font-weight:600}
+
+/* ═══════════════════════════════════════════════════
+   FLOATING WHATSAPP BUTTON
+═══════════════════════════════════════════════════ */
+.wa-fab{
+  position:fixed;bottom:5.5rem;right:1.4rem;z-index:900;
+  display:flex;align-items:center;gap:.55rem;
+  background:#25d366;color:#fff;
+  border-radius:50px;padding:.68em 1.15em .68em .9em;
+  font-family:var(--f2);font-size:.82rem;font-weight:700;
+  text-decoration:none;letter-spacing:.2px;
+  box-shadow:0 4px 20px rgba(37,211,102,.4),0 2px 8px rgba(0,0,0,.4);
+  transition:transform .22s cubic-bezier(.22,1,.36,1),box-shadow .22s;
+  white-space:nowrap;
+}
+.wa-fab:hover{
+  transform:translateY(-3px) scale(1.04);
+  box-shadow:0 8px 28px rgba(37,211,102,.55),0 4px 12px rgba(0,0,0,.5);
+}
+@media(min-width:961px){
+  .wa-fab{bottom:2rem;right:2rem}
+}
+@media(max-width:480px){
+  .wa-fab span{display:none}
+  .wa-fab{padding:.72em;border-radius:50%;bottom:5.5rem;right:1rem}
+}
